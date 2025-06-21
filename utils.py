@@ -34,7 +34,7 @@ def create_bar_chart(data: List[int], title: str = "Array Visualization",
         return fig
     
     # Default colors
-    bar_colors = ['lightblue'] * len(data)
+    bar_colors = ['#1f77b4'] * len(data)
     
     # Apply custom colors if provided
     if colors:
@@ -93,14 +93,14 @@ def create_step_visualization(step_data: Dict[str, Any], step_number: int) -> go
         
         # Color the division points
         for i in range(left, mid + 1):
-            colors[i] = 'lightgreen'
+            colors[i] = '#28a745'
         for i in range(mid + 1, right + 1):
-            colors[i] = 'lightcoral'
+            colors[i] = '#dc3545'
     
     elif step_type in ['merge_step', 'merge_remaining']:
         position = step_data.get('position')
         if position is not None:
-            colors[position] = 'gold'
+            colors[position] = '#ff6b35'  # Orange-red for better contrast
     
     elif step_type == 'merge_start':
         left = step_data.get('left', 0)
@@ -108,9 +108,9 @@ def create_step_visualization(step_data: Dict[str, Any], step_number: int) -> go
         mid = step_data.get('mid', (left + right) // 2)
         
         for i in range(left, mid + 1):
-            colors[i] = 'lightgreen'
+            colors[i] = '#28a745'
         for i in range(mid + 1, right + 1):
-            colors[i] = 'lightcoral'
+            colors[i] = '#dc3545'
     
     title = f"Step {step_number}: {step_data.get('description', 'Algorithm Step')}"
     
@@ -172,7 +172,7 @@ def create_performance_metrics_chart(statistics: Dict[str, int], array_size: int
     theoretical_comparisons = array_size * np.log2(array_size) if array_size > 0 else 0
     
     fig = go.Figure(data=[
-        go.Bar(name='Actual', x=metrics, y=values, marker_color='lightblue'),
+        go.Bar(name='Actual', x=metrics, y=values, marker_color='#1f77b4'),
     ])
     
     # Add theoretical line for comparisons

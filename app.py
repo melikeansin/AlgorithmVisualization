@@ -37,7 +37,7 @@ st.markdown("""
     }
     .info-box {
         background-color: #ffffff;
-        color: #333333;
+        color: #FFD700;
         padding: 1.5rem;
         border-radius: 0.5rem;
         border: 1px solid #e0e0e0;
@@ -50,16 +50,16 @@ st.markdown("""
         margin-top: 0;
     }
     .info-box h4 {
-        color: #333333;
+        color: #FFD700;
         margin-top: 1rem;
     }
     .info-box p, .info-box li {
-        color: #333333;
+        color: #FFD700;
         line-height: 1.6;
     }
     .success-box {
         background-color: #ffffff;
-        color: #333333;
+        color: #FFD700;
         padding: 1.5rem;
         border-radius: 0.5rem;
         border: 1px solid #c3e6cb;
@@ -72,34 +72,34 @@ st.markdown("""
         margin-top: 0;
     }
     .success-box p, .success-box li {
-        color: #333333;
+        color: #FFD700;
         line-height: 1.6;
     }
     .warning-box {
         background-color: #ffffff;
-        color: #333333;
+        color: #FFD700;
         padding: 1.5rem;
         border-radius: 0.5rem;
-        border: 1px solid #ffd700;
-        border-left: 4px solid #ff8c00;
+        border: 1px solid #ffb347;
+        border-left: 4px solid #ff6b35;
         margin: 1rem 0;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .warning-box h4 {
-        color: #ff8c00;
+        color: #ff6b35;
         margin-top: 0;
     }
     .warning-box p, .warning-box li {
-        color: #333333;
+        color: #FFD700;
         line-height: 1.6;
     }
     /* Improve general text readability */
     .stMarkdown {
-        color: #333333;
+        color: #FFD700;
     }
     /* Make sure all text in info boxes is readable */
     .info-box *, .success-box *, .warning-box * {
-        color: #333333 !important;
+        color: #FFD700 !important;
     }
     .info-box h3, .info-box h4 {
         color: #1f77b4 !important;
@@ -108,7 +108,11 @@ st.markdown("""
         color: #28a745 !important;
     }
     .warning-box h3, .warning-box h4 {
-        color: #ff8c00 !important;
+        color: #ff6b35 !important;
+    }
+    /* Override for overview text - make it black for better readability */
+    .overview-box p, .overview-box li {
+        color: #000000 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -252,7 +256,7 @@ def main():
             fig_sorted = create_bar_chart(
                 st.session_state.sorted_array, 
                 "Sorted Array",
-                colors={i: 'lightgreen' for i in range(len(st.session_state.sorted_array))}
+                colors={i: '#28a745' for i in range(len(st.session_state.sorted_array))}
             )
             st.plotly_chart(fig_sorted, use_container_width=True)
         else:
@@ -326,7 +330,7 @@ def main():
     
     with tab1:
         st.markdown("""
-        <div class="info-box">
+        <div class="info-box overview-box">
         <h3>Merge Sort Algorithm</h3>
         <p>Merge Sort is a divide-and-conquer algorithm that divides the input array into two halves, 
         recursively sorts them, and then merges the sorted halves to produce the final sorted array.</p>
@@ -355,7 +359,7 @@ def main():
         
         with col1:
             st.markdown(f"""
-            <div class="info-box">
+            <div class="info-box overview-box">
             <h4>Time Complexity</h4>
             <ul>
                 <li><strong>Best Case:</strong> {complexity_info['best_case']}</li>
@@ -381,7 +385,7 @@ def main():
         st.dataframe(comparison_df, use_container_width=True)
         
         st.markdown("""
-        <div class="info-box">
+        <div class="info-box overview-box">
         <h4>Why Choose Merge Sort?</h4>
         <ul>
             <li>🎯 <strong>Predictable Performance:</strong> Always O(n log n), regardless of input</li>
