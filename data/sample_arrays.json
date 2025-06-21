@@ -1,0 +1,85 @@
+{
+  "educational_examples": {
+    "basic_example": {
+      "name": "Basic Example",
+      "array": [64, 34, 25, 12, 22, 11, 90],
+      "description": "A simple array to demonstrate merge sort basics"
+    },
+    "small_sorted": {
+      "name": "Already Sorted",
+      "array": [1, 2, 3, 4, 5],
+      "description": "Pre-sorted array to show merge sort behavior"
+    },
+    "small_reverse": {
+      "name": "Reverse Sorted",
+      "array": [5, 4, 3, 2, 1],
+      "description": "Reverse sorted array - worst case for some algorithms"
+    },
+    "with_duplicates": {
+      "name": "With Duplicates",
+      "array": [5, 2, 8, 2, 9, 1, 5, 5],
+      "description": "Array with duplicate values to test stability"
+    }
+  },
+  "performance_test_cases": {
+    "small_random": {
+      "name": "Small Random",
+      "array": [23, 45, 16, 37, 3, 99, 22],
+      "description": "Small random array for basic performance testing"
+    },
+    "medium_random": {
+      "name": "Medium Random",
+      "array": [88, 12, 67, 34, 91, 45, 23, 78, 56, 89, 33, 77, 44, 66, 22],
+      "description": "Medium sized random array"
+    },
+    "nearly_sorted": {
+      "name": "Nearly Sorted",
+      "array": [1, 2, 3, 5, 4, 6, 7, 8, 9, 10],
+      "description": "Nearly sorted array with few out of place elements"
+    }
+  },
+  "edge_cases": {
+    "single_element": {
+      "name": "Single Element",
+      "array": [42],
+      "description": "Array with only one element"
+    },
+    "two_elements_sorted": {
+      "name": "Two Elements (Sorted)",
+      "array": [1, 2],
+      "description": "Two elements already in order"
+    },
+    "two_elements_unsorted": {
+      "name": "Two Elements (Unsorted)",
+      "array": [2, 1],
+      "description": "Two elements needing swap"
+    },
+    "all_same": {
+      "name": "All Same Values",
+      "array": [7, 7, 7, 7, 7],
+      "description": "Array where all elements are identical"
+    },
+    "empty": {
+      "name": "Empty Array",
+      "array": [],
+      "description": "Empty array edge case"
+    }
+  },
+  "complexity_demonstration": {
+    "power_of_two": {
+      "name": "Power of Two Size",
+      "array": [8, 3, 1, 7, 0, 10, 2, 5],
+      "description": "Array with power-of-two size for clean recursion"
+    },
+    "fibonacci_sequence": {
+      "name": "Fibonacci Numbers",
+      "array": [21, 13, 8, 5, 3, 2, 1, 1, 0],
+      "description": "Fibonacci sequence in reverse order"
+    },
+    "large_range": {
+      "name": "Large Value Range",
+      "array": [1000, 1, 500, 250, 750, 100, 900],
+      "description": "Array with large value differences"
+    }
+  }
+}
