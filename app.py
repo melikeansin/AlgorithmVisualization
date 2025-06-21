@@ -272,6 +272,33 @@ def main():
         fig_step = create_step_visualization(current_step_data, st.session_state.current_step + 1)
         st.plotly_chart(fig_step, use_container_width=True)
         
+        # Navigation buttons below the visualization
+        total_steps = len(st.session_state.steps)
+        col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 1])
+        
+        with col1:
+            if st.button("⏮️ First Step", key="first_bottom"):
+                st.session_state.current_step = 0
+                st.rerun()
+        
+        with col2:
+            if st.button("⏪ Previous", key="prev_bottom") and st.session_state.current_step > 0:
+                st.session_state.current_step -= 1
+                st.rerun()
+        
+        with col3:
+            st.write(f"**{st.session_state.current_step + 1} / {total_steps}**")
+        
+        with col4:
+            if st.button("⏩ Next", key="next_bottom") and st.session_state.current_step < total_steps - 1:
+                st.session_state.current_step += 1
+                st.rerun()
+        
+        with col5:
+            if st.button("⏭️ Last Step", key="last_bottom"):
+                st.session_state.current_step = total_steps - 1
+                st.rerun()
+        
         # Display step information
         col1, col2 = st.columns([2, 1])
         

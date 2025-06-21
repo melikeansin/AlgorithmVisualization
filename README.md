@@ -4,7 +4,7 @@ An interactive web application built with Streamlit that demonstrates the Merge 
 
 ## 🌐 Live Application
 
-**Streamlit Web App:** *[Deploy to Streamlit Cloud to get URL]*
+Streamlit Web App: melikealgorithm.streamlit.app/
 
 ## 📋 Project Description
 
@@ -48,9 +48,6 @@ Merge Sort is a divide-and-conquer algorithm that:
    streamlit run app.py
    ```
 
-4. **Access the application**
-   - Open your web browser and go to `http://localhost:8501`
-   - The application will automatically open in your default browser
 
 ### Alternative Installation
 
@@ -73,7 +70,7 @@ merge-sort-visualizer/
 └── data/                # Sample data files (optional)
 ```
 
-## 🖼️ Application Screenshots
+## 🖼️ Application 
 
 ### Main Interface
 The main interface provides controls for array input and algorithm visualization:
@@ -295,30 +292,10 @@ python test_algorithm.py
 - Time Complexity: [Big O Notation Guide](https://www.bigocheatsheet.com/)
 - Sorting Algorithms: [Algorithm Comparison](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 
-## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit pull requests or open issues for:
-
-- Bug fixes
-- Feature enhancements
-- Documentation improvements
-- Test coverage expansion
-- Performance optimizations
 
 ## 📝 License
 
 This project is created for educational purposes. Feel free to use and modify for learning and teaching.
 
-## 🔄 Version History
 
-- **v1.0.0**: Initial release with full merge sort implementation and visualization
-  - Complete algorithm implementation
-  - Interactive Streamlit interface
-  - Step-by-step visualization
-  - Performance analysis
-  - Comprehensive test suite
-  - Documentation and examples
-
----
-
-**Created with ❤️ for algorithm education and visualization**
