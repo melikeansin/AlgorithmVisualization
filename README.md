@@ -4,7 +4,7 @@ An interactive web application built with Streamlit that demonstrates the Merge 
 
 ## 🌐 Live Application
 
-Streamlit Web App: melikealgorithm.streamlit.app/
+Streamlit Web App: https://melikealgorithm.streamlit.app
 
 ## 📋 Project Description
 
@@ -276,6 +276,20 @@ streamlit run app.py
 # Run tests
 python test_algorithm.py
 ```
+# In-App Screenshots
+## Main Menu interface
+![image](https://github.com/user-attachments/assets/b7c23ea8-4222-426d-864e-d70bc7a8f20e)
+
+## Sorted Array 
+![image](https://github.com/user-attachments/assets/c3eb9979-3d14-40c9-8441-dcfd7d07037b)
+
+## Step-by-Step Visualization
+![image](https://github.com/user-attachments/assets/19182811-cb42-424e-9485-57aefde624eb)
+
+## Performance Analysis and Statistics
+![image](https://github.com/user-attachments/assets/bfbb2cef-2eb9-4091-9f8e-4b76eb1a6a2c)
+
+
 
 ## 📚 References and Resources
 
@@ -292,7 +306,11 @@ python test_algorithm.py
 - Time Complexity: [Big O Notation Guide](https://www.bigocheatsheet.com/)
 - Sorting Algorithms: [Algorithm Comparison](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 
+## Author
 
+- **Name:** Melike Anşin
+- **Student ID:** 220543011
+- **GitHub:** https://github.com/melikeansin
 
 ## 📝 License
 
